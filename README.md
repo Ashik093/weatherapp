@@ -7,6 +7,4 @@ clone the git rep main branch
 run the following command to 
 ```bash
 yarn
-
-```bash
 yarn dev
