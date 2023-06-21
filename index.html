@@ -39,7 +39,10 @@
                         </div>
 
                         <div class="card mt-4 weather-card d-none">
-                            <div class="card-body p-5">
+                            <div class="card-body p-5 no-data-card ">
+                                <h6 class="text-center">No Available Data</h6>
+                            </div>
+                            <div class="card-body p-5 data-card d-none">
 
                                 <div class="d-flex">
                                     <h6 class="flex-grow-1" id="place">Warsaw, Bangladesh</h6>
@@ -58,17 +61,17 @@
                                     </div>
                                 </div>
                                 <div class=" text-center">
-                                    <span class="small btn btn-default border" id="ferh">F</span>
-                                    <span class="small btn btn-default romanSilver" id="cel">C</span>
+                                    <span class="small btn btn-default romanSilver border" id="cel">C</span>
+                                    <span class="small btn btn-default romanSilver" id="ferh">F</span>
                                 </div>
                                 <div class="mt-4">
                                     <div class="d-flex justify-content-center align-items-center f-1rem">
-                                        <div class="p-2"><span class="ms-1"> 40 km/h
-                          </span></div>
-                                        <div class="p-2"><span class="ms-1"> 84% </span>
-                                        </div>
-                                        <div class="p-2"><span class="ms-1"> 0.2h </span>
-                                        </div>
+                                        <div class="p-2"><span class="ms-1 text-center" id="humidity"> </span></div>
+                                        <div class="p-2"><span class="ms-1" id="uv"></span></div>
+                                        <div class="p-2"><span class="ms-1" id="wind_mph"></span></div>
+                                        <div class="p-2"><span class="ms-1" id="wind_kph"></span></div>
+                                        <div class="p-2"><span class="ms-1" id="pressure_mb"></span></div>
+
                                     </div>
 
                                 </div>
