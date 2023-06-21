@@ -1,5 +1,12 @@
 import { getWeatherData } from "./getWeather";
-import { convertDateFormat, getCurrentLocation } from "./helper/helper";
+import {
+    convertDateFormat,
+    getCurrentLocation,
+    hideLoader,
+    showLoader,
+    showNoDataCard,
+    showDataCard
+} from "./helper/helper";
 
 const state = {
     data: {},
@@ -75,30 +82,5 @@ const setHtmlDataToUiCel = (value) => {
     document.getElementById("temp").innerHTML = `${value}°C`
     document.getElementById("feelsLike").innerHTML = `Feels like ${value}°C `
 }
-const hideLoader = () => {
-    var loaderStart = document.querySelector('.loaderStart');
-    var waetherCard = document.querySelector('.weather-card');
-    loaderStart.classList.remove('loading');
-    waetherCard.classList.remove('d-none');
-}
 
-const showLoader = () => {
-    var loaderStart = document.querySelector('.loaderStart');
-    var waetherCard = document.querySelector('.weather-card');
-    loaderStart.classList.add('loading');
-    waetherCard.classList.add('d-none');
-}
-
-const showNoDataCard = () => {
-    var noDataCard = document.querySelector('.no-data-card');
-    var dataCard = document.querySelector('.data-card');
-    noDataCard.classList.remove('d-none');
-    dataCard.classList.add('d-none');
-}
-const showDataCard = () => {
-    var noDataCard = document.querySelector('.no-data-card');
-    var dataCard = document.querySelector('.data-card');
-    noDataCard.classList.add('d-none');
-    dataCard.classList.remove('d-none');
-}
 await getWeatherDataOnLoad()
